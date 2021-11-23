@@ -19,10 +19,11 @@ links = [
 [extra.author]
 name = "Hallo"
 
-[extra.theme]
-background = "#6FCDBD"
-foreground = "#FFF"
-hover = "#333"
+# Add these options to your config.toml to override the default colors
+# [extra.theme]
+# background = "#6FCDBD"
+# foreground = "#FFF"
+# hover = "#333"
 
 [author]
 name = "Jan Baudisch"

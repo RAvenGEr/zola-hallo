@@ -12,23 +12,25 @@
 
         {% if config.extra.theme %}
             <style>
+                {% if config.extra.theme.foreground or config.extra.theme.background %}
                 body {
-                    color: {{ config.extra.theme.foreground }} !important;
-                    background-color: {{ config.extra.theme.background }} !important;
+                    {% if config.extra.theme.foreground %} color: {{ config.extra.theme.foreground }} !important; {% endif %}
+                    {% if config.extra.theme.background %} background-color: {{ config.extra.theme.background }} !important; {% endif %}
                 }
-
+                {% endif %}
+                {% if config.extra.theme.foreground %}
                 a {
                     color: {{ config.extra.theme.foreground }} !important;
                 }
-
-                a:hover {
-                    color: {{ config.extra.theme.hover }} !important;
-                }
-
-
                 img.portrait {
                     border: 10px solid {{ config.extra.theme.foreground }} !important;
                 }
+                {% endif %}
+                {% if config.extra.theme.hover %}
+                a:hover {
+                    color: {{ config.extra.theme.hover }} !important;
+                }
+                {% endif %}
             </style>
         {% endif %}
     </head>
