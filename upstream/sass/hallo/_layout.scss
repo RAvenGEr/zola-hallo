@@ -4,7 +4,8 @@
 
 main {
     display: flex;
-    margin-top: 20vh;
+    margin: 20vh auto 0 auto;
+    max-width: 920px;
 
     .column.left {
         text-align: end;
@@ -34,7 +35,7 @@ main {
 
     @media screen and (max-width: $break-large) {
         flex-direction: column;
-        margin-top: 0;
+        margin: 0 2em 0 2em;
 
         .column.left {
             text-align: center;
