@@ -47,13 +47,14 @@
                     <div class="links">
                         {% for link in config.extra.links %}
                             <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
-                                {% if link.iconset %}
-                                    <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
-                                {% else %}
-                                    <span class="fab {{ 'fa-' ~ link.icon }}"></span>
-                                {% endif %}
+                                <span class="{{ link.iconset | default(value="fab") }} {{ 'fa-' ~ link.icon }}"></span>
                             </a>
                         {% endfor %}
+                    </div>
+                {% endif %}
+                {% if section.extra.footnotes %}
+                    <div class="footnotes">
+                        {{ section.extra.footnotes | markdown(inline=true) | safe }}
                     </div>
                 {% endif %}
             </div>

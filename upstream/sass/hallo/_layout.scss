@@ -60,3 +60,28 @@ footer {
         flex-direction: column;
     }
 }
+
+.footnotes {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #eee;
+  font-size: 0.7rem;
+}
+
+.footnote-reference::before {
+    content: '[';
+}
+
+.footnote-reference::after {
+    content: ']';
+}
+
+.footnote-definition-label {
+    display: inline;
+}
+
+.footnote-definition p {
+    display: inline;
+}
